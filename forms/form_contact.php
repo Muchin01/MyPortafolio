@@ -1,49 +1,24 @@
-<?php
-  if (isset($_POST['name']))
-    $name = $_POST['name'];
+<?php  
 
-  if (isset($_POST['email']))
-    $email = $_POST['email'];
+// Llamando a los campos
+$nombre = $_POST['name'];
+$correo = $_POST['email'];
+$subject = $_POST['subject'];
+$mensaje = $_POST['message'];
+$telefono = $_POST['number'];
 
-  if (isset($_POST['subject']))
-    $subject = $_POST['subject'];
 
-    if (isset($_POST['number']))
-    $number = $_POST['number'];
+// Datos para el correo
+$destinatario = "marlonmuchin01@gmail.com";
+$asunto = "Contacto desde Portafolio";
 
-  if (isset($_POST['message']))
-    $message = $_POST['message'];
+$carta = "De: $nombre \n";
+$carta .= "Correo: $correo \n";
+$carta .= "Telefono: $telefono \n";
+$carta .= "Mensaje: $mensaje";
 
-  if ($name === '') {
-    echo "Name cannot be empty.";
-    die();
-  }
-  if ($email === '') {
-    echo "Email cannot be empty.";
-    die();
-  } else {
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      echo "Email format invalid.";
-      die();
-    }
-  }
-  if ($subject === '') {
-    echo "Subject cannot be empty.";
-    die();
-  }
-  if ($message === '') {
-    echo "Message cannot be empty.";
-    die();
-  }
+// Enviando Mensaje
+mail($destinatario, $asunto, $carta);
+header('Location:./envio.html');
 
-  if ($number === '') {
-    echo "Message cannot be empty.";
-    die();
-  }
-
-  $content = "From: $name \nEmail: $email \nMessage: $message \nNumber: $number";
-  $recipient = "marlonmuchin01@gmail.com";
-  $mailheader = "From: $email \r\n";
-  mail($recipient, $subject, $content, $mailheader) or die("Error!");
-  echo "Email sent!";
 ?>
