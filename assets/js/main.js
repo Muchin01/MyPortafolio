@@ -186,3 +186,31 @@
   });
 
 })(jQuery);
+
+
+
+// function validaNumericos(){
+//   var inputtxt = document.getElementById('text'); 
+//   var valor = inputtxt.value;
+//   for(i=0;i<valor.length;i++){
+//       var code=valor.charCodeAt(i);
+//           if(code>=48 || code<=57){          
+//             inputtxt.value=""; 
+//             return;
+//           }    
+//     }
+   
+//  }
+
+
+// function checkName(evt) {
+//   var charCode = evt.charCode;
+  
+//     if (charCode != 0) {
+//       if (charCode >=48 || charCode <=57) {
+//         return false;
+//       }
+//       return true;
+//     }
+//   }
+

@@ -1,29 +1,42 @@
 <?php
 
-require 'PHPMailer/PHPMailerAutoload.php';
-//    require './PHPMailer/PHPMailerAutoload.php';
-  include_once('PHPMailer/src/PHPMailer.php');
-  include_once('PHPMailer/src/SMTP.php');
-  include_once('PHPMailer/src/Exception.php');
 
- 
-//Create a new PHPMailer instance
-$mail = new PHPMailer();
+require'../PHPMailer/src/PHPMailer.php';
+require'../PHPMailer/src/SMTP.php';
+require'../PHPMailer/src/Exception.php';
+require '../PHPMailer/class.phpmailer.php';
+require '../PHPMailer/class.smtp.php';
+
+
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$mail = new PHPMailer(true);
 $mail->IsSMTP();
  
 //Configuracion servidor mail
+$mail->SMTPDebug = SMTP::DEBUG_SERVER;
+
 $mail->From = "marlonmuchin01@gmail.com"; //remitente
 $mail->SMTPAuth = true;
-$mail->SMTPSecure = 'tls'; //seguridad
-$mail->Host = "smtp.gmail.com"; // servidor smtp
-$mail->Port = 587; //puerto
-$mail->Username ='marlonmuchin01@gmail.com'; //nombre usuario
-$mail->Password = 'Marlon__01!'; //contraseña
- 
+// $mail->SMTPSecure = 'tls'; //seguridad
+// $mail->Host = "smtp.gmail.com"; // servidor smtp        smtp.gmail.com
+// $mail->Port = 465 ; //puerto 465 
+$mail->Username ='Marlon Muchin'; //nombre usuario
+$mail->Password = 'Mi_Reina01!'; //contraseña
+
+$mail->SMTPSecure = 'tls';
+$mail->Host = 'smtp.gmail.com';
+$mail->Port = 465;
+
 //Agregar destinatario
-$mail->AddAddress($_POST['email']);
+$mail->FromName = $_POST['name'];
+$mail->addAddress($_POST['email']);
 $mail->Subject = $_POST['subject'];
 $mail->Body = $_POST['message'];
+
+
  
 //Avisar si fue enviado o no y dirigir al index
 if ($mail->Send()) {
@@ -35,3 +48,7 @@ if ($mail->Send()) {
            alert("NO ENVIADO, intentar de nuevo");
         </script>';
 }
+
+
+
+
