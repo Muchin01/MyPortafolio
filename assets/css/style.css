@@ -198,7 +198,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu a:hover i, .nav-menu .active > a i, .nav-menu li:hover > a i {
-  color: #149ddd;
+  color: #00f3ff;
+  /* color: #149ddd; */
 }
 
 /* Mobile Navigation */
@@ -311,7 +312,8 @@ background: linear-gradient(to right, #004e92, #000428);  */
   color: #fff;
   padding-bottom: 4px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid #00f3ff;
+  /* border-bottom: 3px solid #149ddd; */
 }
 
 @media (min-width: 1024px) {
@@ -354,7 +356,9 @@ section {
   position: relative;
   color: #173b6c;
 }
-
+.section-title p{
+    padding-bottom: 20px;
+}
 
 .contact_header {
   font-size: 20px;
@@ -1087,10 +1091,11 @@ figure{
 }
 .contenedor figure:hover > .capa h3{
   margin-top: 50px;
-  /* margin-bottom: 15px; */
-  /* margin: auto;
-  text-align: center; */
 }
+.contenedor figure:hover > .capa .title_mycsql{
+  margin-top: 25px;
+}
+
 .contenedor figure:hover > img{
   transform: scale(1.3);
 }
@@ -1125,9 +1130,51 @@ figure{
   text-shadow:2px 2px 2px #F7E018;
 }
 
+.contenedor figure .title_sharp{
+  text-shadow:2px 2px 2px #68217A;
+}
+
+.contenedor figure .title_bootstrap{
+  text-shadow:2px 2px 2px #5B4282;
+}
+
+.contenedor figure .title_angular{
+  text-shadow:2px 2px 2px #C3002F;
+}
+
+.contenedor figure .title_github{
+  text-shadow:2px 2px 2px #000000;
+}
+
+.contenedor figure .title_php{
+  text-shadow:2px 2px 2px #465489;
+}
+
+.contenedor figure .title_wp{
+  text-shadow:2px 2px 2px #00759D;
+}
+
+.contenedor figure .title_laravel{
+  text-shadow:2px 2px 2px #FD4F31;
+}
+
+.contenedor figure .title_mycsql{
+  text-shadow:2px 2px 2px #837e7d;
+}
+
+
+.contenedor figure .title_mysql{
+  text-shadow:2px 2px 2px #00618A;
+}
+
+
+ .title_hello{
+  padding-bottom:  30px;
+  color: #00618A;
+}
+
 
 
 .contact_number{
   width: 50%;
 }
-
