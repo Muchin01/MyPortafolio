@@ -137,13 +137,24 @@
                 <!-- <a class="link_dow btn_dowload" href="/assets/Docs/Marlon Antonio Muchin Mendoza_CVP.pdf" download="Marlon Antonio Muchin Mendoza CV.pdf"> -->
 
                 <div class="container_btn">
-                  <a href="./assets/Docs/Marlon Antonio Muchin Mendoza_CVP.pdf"
+                  <a href="pdf.php"
                     download="Marlon Antonio Muchin Mendoza_CV.pdf">
-                    <!-- <button class="btn_dowload" ><i class="fa fa-download"></i>  Download CV</button></a> -->
+                    
                     <button class="btn_dowload"><i class="icon_dowload fa fa-download"></i>Download CV</button>
                   </a>
 
                 </div>
+
+                <!-- <a href="pdf.php">Download PDF Now</a> -->
+                <!-- <div class="container_btn">
+                  <a href="./forms/pdf.php"
+                    download="Marlon_Antonio_Muchin_Mendoza.pdf">
+                  
+                    <button class="btn_dowload"><i class="icon_dowload fa fa-download"></i>Download CV</button>
+                  </a>
+
+                </div> -->
+
 
                 <!-- </a>  -->
                 <!-- <button class="btn_dowload"><i class="fa fa-download"></i> Download CV</button></a> -->
@@ -247,7 +258,7 @@
           <!-- segunda seccion -->
           <div class="col-lg-3 contenedor" data-aos="fade-up">
             <figure>
-              <img class="img_icon" src="assets/img/javascript-1.svg" >
+              <img class="img_icon" src="assets/img/javascript-1.svg">
               <div class="capa">
                 <h3 class="title_js">JavaScript</h3>
                 <strong>
@@ -281,6 +292,7 @@
         </div>
 
       </div>
+    
 
       </div>
     </section><!-- End Skills Section -->
@@ -551,7 +563,7 @@
       </div>
     </section><!-- End Services Section -->
 
-  
+
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
@@ -559,63 +571,63 @@
 
         <div class="section-title">
           <h2>Contacto</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint
-            consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat
-            sit
-            in iste officiis commodi quidem hic quas.</p>
+          <p class="contact_header">Pongase en contacto conmigo llenando los siguientes campos</p>
         </div>
 
         <div class="row" data-aos="fade-in">
 
           <div class=" col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/form_contact.php" method="POST" role="form" class="php-email-form">
-              <!-- <form action="12forms/send.php" method="POST"> -->
+            <form method="post" data-netlify="true" class="php-email-forms needs-validation" novalidate>
               <div class="form-row">
                 <div class="form-group col-md-6">
-                  <label for="name">Nombre y Apellido</label>
-                  <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
-                    data-msg="Please enter at least 4 chars" />
-                  <div class="validate"></div>
+                  <label for="first_name" class="form-label">Nombre y Apellido</label>
+                  <input  name="Nombre" type="text" class="form-control" id="first_name" required>
+                  <div class="invalid-feedback">
+                    Escriba su Correo Electronico!
+                  </div>
                 </div>
                 <div class="form-group col-md-6">
-                  <label for="name">Email</label>
-                  <input type="email" class="form-control" name="email" id="email" data-rule="email"
-                    data-msg="Please enter a valid email" />
-                  <div class="validate"></div>
+                  <label for="gmail" class="form-label">Email</label>
+                  <input  name="Email"  type="email" class="form-control" id="gmail" required>
+                  <div class="invalid-feedback">
+                    Escriba su Correo Electronico!
+                  </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                  <label for="subject class=" form-label">Asunto</label>
+                  <input name="Asunto"  type="text" class="form-control" id="subject" required>
+                  <div class="invalid-feedback">
+                    Escriba un Asunto!
+                  </div>
+                </div>
+
+                <div class="form-group col-md-4">
+                  <label for="phone" class="form-label">Telefono</label>
+                  <input name="Telefono" type="number" class="form-control" id="phone" required>
+                  <div class="invalid-feedback">
+                    Escriba su numero de telefono!
+                  </div>
+                </div>
+
+                <div class="form-group col-md-12">
+                  <label for="description" class="form-label">Descripción</label>
+                  <textarea name="Descripción" class="form-control" rows="5" id="description" required></textarea>
+                  <div class="invalid-feedback">
+                    Escriba una Descripción de Proyecto!
+                  </div>
+                </div>
+              
+                <div class="col-12 text-center">
+                  <button name="submit" type="submit" value="Enviar Mensaje">Enviar mensaje</button>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="name">Asunto</label>
-                <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4"
-                  data-msg="Please enter at least 8 chars of subject" />
-                <div class="validate"></div>
-              </div>
-
-             
-              <div class="form-group">
-                <label for="name">Telefono</label>
-                <input  type="number" class="contact_number form-control"
-                 name="number" id="text"
-                  data-msg="Enter only numbers" data-rule="required" placeholder="+503"/>
-                <div class="validate"></div>
-              </div>
-              
-              
-              <div class="form-group">
-                <label for="name">Descripción</label>
-                <textarea class="form-control" name="message" rows="5" data-rule="required"
-                  data-msg="Please write something for us"></textarea>
-                <div class="validate"></div>
-              </div>
-              <div class="mb-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Descripción</div>
-              </div>
-              <div class="text-center">
-                <button name="submit" type="submit" value="Enviar">Enviar Mensaje</button>
-              </div>
             </form>
+
+
+
+
+            <!-- </form> -->
           </div>
 
         </div>
@@ -639,6 +651,7 @@
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
 
   <!-- Vendor JS Files -->
+  <script src="assets/js/form.js"></script>
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
@@ -658,3 +671,49 @@
 </body>
 
 </html>
+
+
+
+<!-- for 
+
+  <form method="post" data-netlify="true" class="php-email-forms needs-validation" novalidate>
+              <div class="form-row">
+                
+                <div class="col-md-4">
+                  <label for="validationCustom01" class="form-label">First name</label>
+                  <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                
+
+              <div class="form-group col-md-6">
+                <label for="name">Nombre y Apellido</label>
+                <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4"
+                  data-msg="Please enter at least 4 chars" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="form-group col-md-6">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" name="email" id="email" data-rule="email"
+                  data-msg="Please enter a valid email" />
+                <div class="validate"></div>
+              </div>
+
+              <div class="mb-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Descripción</div>
+              </div>
+              
+           
+              <div class="text-center">
+                <button name="submit" type="submit" value="Enviar Mensaje">Enviar mensaje</button>
+
+              </div>
+              </div>
+            </form>
+
+-->
