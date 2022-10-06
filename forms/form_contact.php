@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 // Llamando a los campos
 $nombre = $_POST['Nombre'];
@@ -22,13 +22,29 @@ $carta .= "Mensaje: $mensaje \n";
 // mail($destinatario, $asunto, $carta);
 // header('Location:/envio.html');
 
-if ((mail($destinatario, $subject, $carta))){
-    echo'<script type="text/javascript">
+
+if ((mail($destinatario, $subject, $carta))) {
+    echo '<script type="text/javascript">
            alert("Enviado Correctamente :)");
         </script>';
+    header('Location:/index.html');
 } else {
-    echo'<script type="text/javascript">
+    echo '<script type="text/javascript">
            alert("NO ENVIADO, intentar de nuevo :(");
         </script>';
+    header('Location:/index.html');
 }
+
+
+
+
+// pruebas ...
+// if((mail($destinatario, $subject, $carta))){
+// $result="Algo esta mal, por favor inténtelo de nuevo.";
+// }
+// else{
+// $result="Gracias ".$_POST['nombre']." por contactarnos, espera la respuesta!";
+// header("Location:index.html");
+// }
+
 ?>
