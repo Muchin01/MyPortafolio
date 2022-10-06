@@ -1248,7 +1248,9 @@ figcaption {
 .modalImg {
     cursor: pointer;
     border-radius: 0.4rem;
-    max-height: 200px;
+    height: 100%;
+    width: 100%;
+    max-width: 700px;
 }
 .modalImg:hover {
     opacity: 0.8;
